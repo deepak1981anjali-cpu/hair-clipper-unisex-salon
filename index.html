@@ -38,7 +38,7 @@
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
 // Replace this placeholder with the salon's WhatsApp number in international format, digits only.
-const SALON_WHATSAPP_NUMBER = '917737270080';
+const SALON_WHATSAPP_NUMBER = '919785660666';
 document.getElementById('wa').addEventListener('click',function(e){if(!SALON_WHATSAPP_NUMBER){e.preventDefault();document.getElementById('contact').scrollIntoView({behavior:'smooth'});alert('Please add the salon WhatsApp number in the website code before publishing.');}});
 document.getElementById('booking').addEventListener('submit',function(e){e.preventDefault();if(!SALON_WHATSAPP_NUMBER){alert('Website setup needed: add your salon WhatsApp number in the code first.');return;}const f=new FormData(this);const msg=`Hello Hair Clipper Unisex Salon!%0AName: ${encodeURIComponent(f.get('name'))}%0APhone: ${encodeURIComponent(f.get('phone'))}%0AService: ${encodeURIComponent(f.get('service'))}%0APreferred date: ${encodeURIComponent(f.get('date')||'Flexible')}`;window.open(`https://wa.me/${SALON_WHATSAPP_NUMBER}?text=${msg}`,'_blank','noopener');});
 </script>
